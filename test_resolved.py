@@ -80,7 +80,6 @@ df['outlier_yn'] = (df['grossUSD'] < lower_bound) | (df['grossUSD'] > upper_boun
 # Save the resulting DataFrame
 df.to_csv('output_data.csv', index=False)
 
-# Save the resulting DataFrame
 explanation = """
 I used the Interquartile Range (IQR) method to identify outliers because it's a robust technique that isn't influenced by anomalous distributions. This method is suitable for outlier detection in revenue data (grossUSD).
 
